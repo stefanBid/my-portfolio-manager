@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_ui_elements_buttons",
+  "info": {
+    "displayName": "Button"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "size": {
+      "type": "enumeration",
+      "default": "medium",
+      "enum": [
+        "small",
+        "medium"
+      ]
+    },
+    "variant": {
+      "type": "enumeration",
+      "default": "tertiary",
+      "enum": [
+        "white",
+        "tertiary"
+      ]
+    }
+  },
+  "config": {}
+}
