@@ -37,6 +37,18 @@ export interface BlockElementsSkillCard extends Struct.ComponentSchema {
   };
 }
 
+export interface PageElementsLanguageListItem extends Struct.ComponentSchema {
+  collectionName: 'components_page_elements_language_list_items';
+  info: {
+    displayName: 'LanguageListItem';
+  };
+  attributes: {
+    flagIcon: Schema.Attribute.String;
+    lang: Schema.Attribute.String;
+    text: Schema.Attribute.String;
+  };
+}
+
 export interface PageElementsSkillBar extends Struct.ComponentSchema {
   collectionName: 'components_page_elements_skill_bars';
   info: {
@@ -100,6 +112,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'block-elements.project-card': BlockElementsProjectCard;
       'block-elements.skill-card': BlockElementsSkillCard;
+      'page-elements.language-list-item': PageElementsLanguageListItem;
       'page-elements.skill-bar': PageElementsSkillBar;
       'ui-elements.button': UiElementsButton;
       'ui-elements.link': UiElementsLink;

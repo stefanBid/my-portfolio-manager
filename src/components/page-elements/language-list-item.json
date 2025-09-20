@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_page_elements_language_list_items",
+  "info": {
+    "displayName": "LanguageListItem"
+  },
+  "options": {},
+  "attributes": {
+    "lang": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "flagIcon": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
