@@ -13,6 +13,47 @@ export interface BlockElementsProjectCard extends Struct.ComponentSchema {
   };
 }
 
+export interface BlockElementsSkillCard extends Struct.ComponentSchema {
+  collectionName: 'components_block_elements_skill_cards';
+  info: {
+    displayName: 'SkillCard';
+  };
+  attributes: {
+    icon: Schema.Attribute.String;
+    isGod: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    name: Schema.Attribute.String;
+    stats: Schema.Attribute.Component<'page-elements.skill-bar', true>;
+    type: Schema.Attribute.Enumeration<
+      [
+        'feLanguage',
+        'beLanguage',
+        'feFramework',
+        'beFramework',
+        'beDb',
+        'other',
+      ]
+    > &
+      Schema.Attribute.DefaultTo<'feLanguage'>;
+  };
+}
+
+export interface PageElementsSkillBar extends Struct.ComponentSchema {
+  collectionName: 'components_page_elements_skill_bars';
+  info: {
+    displayName: 'SkillBar';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    level: Schema.Attribute.Decimal &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 5;
+        },
+        number
+      >;
+  };
+}
+
 export interface UiElementsButton extends Struct.ComponentSchema {
   collectionName: 'components_ui_elements_buttons';
   info: {
@@ -58,6 +99,8 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'block-elements.project-card': BlockElementsProjectCard;
+      'block-elements.skill-card': BlockElementsSkillCard;
+      'page-elements.skill-bar': PageElementsSkillBar;
       'ui-elements.button': UiElementsButton;
       'ui-elements.link': UiElementsLink;
       'ui-elements.section': UiElementsSection;

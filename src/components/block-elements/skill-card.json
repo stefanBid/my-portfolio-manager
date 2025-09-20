@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_block_elements_skill_cards",
+  "info": {
+    "displayName": "SkillCard"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "default": "feLanguage",
+      "enum": [
+        "feLanguage",
+        "beLanguage",
+        "feFramework",
+        "beFramework",
+        "beDb",
+        "other"
+      ]
+    },
+    "icon": {
+      "type": "string"
+    },
+    "isGod": {
+      "type": "boolean",
+      "default": false
+    },
+    "stats": {
+      "type": "component",
+      "component": "page-elements.skill-bar",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

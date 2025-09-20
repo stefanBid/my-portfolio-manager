@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_page_elements_skill_bars",
+  "info": {
+    "displayName": "SkillBar"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "level": {
+      "type": "decimal",
+      "max": 5
+    }
+  },
+  "config": {}
+}
