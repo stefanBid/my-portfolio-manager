@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_block_elements_project_cards",
+  "info": {
+    "displayName": "ProjectCard"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "unique": false
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "deployCta": {
+      "type": "component",
+      "component": "ui-elements.button",
+      "repeatable": false
+    },
+    "codebaseCta": {
+      "type": "component",
+      "component": "ui-elements.button",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}
